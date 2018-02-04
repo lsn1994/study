@@ -1,3 +1,5 @@
+default target: all
+
 producer.o: producer.cpp producer.h
 	g++ -g -c -std=c++11 producer.cpp -o producer.o
 
@@ -11,7 +13,7 @@ all: producer.o consumer.o main.o
 	g++ main.o producer.o consumer.o -lpthread -o producer_consumer
 
 clean:
-	rm -f *.o main
+	rm -f *.o producer_consumer
 
 
 
